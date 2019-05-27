@@ -15,10 +15,10 @@ namespace Blockchain
     {
         IPEndPoint endPoint;
         Socket socket;
-        BlockChain blockChain;
+        Blockchain blockChain;
         Form1 form;
         bool valid;
-        BlockChain copyBlockChain;
+        Blockchain copyBlockChain;
         int port;
 
         public void SetBlockChain(Blockchain blockChain, Form1 form)
