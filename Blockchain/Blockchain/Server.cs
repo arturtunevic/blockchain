@@ -9,7 +9,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 
-namespace BlockChain
+namespace Blockchain
 {
     class Server
     {
@@ -21,7 +21,7 @@ namespace BlockChain
         BlockChain copyBlockChain;
         int port;
 
-        public void SetBlockChain(BlockChain blockChain, Form1 form)
+        public void SetBlockChain(Blockchain blockChain, Form1 form)
         {
             this.blockChain = blockChain;
             this.form = form;
@@ -108,9 +108,9 @@ namespace BlockChain
                 }
         }
 
-        public BlockChain DeepCopy(BlockChain chain)
+        public Blockchain DeepCopy(Blockchain chain)
         {
-            BlockChain temp = new BlockChain();
+            Blockchain temp = new Blockchain();
             foreach(Block block in chain.GetChain().Skip(1))
             {
                 Block tempBlock = new Block(block.GetTimeStamp(), block.GetPreviousHash(), block.GetData());
